@@ -76,4 +76,5 @@ saveToFile = function () {
 
 if (localStorage.spider){
     window.onload = spider_continue; 
+    document.onload = spider_continue; 
 }
