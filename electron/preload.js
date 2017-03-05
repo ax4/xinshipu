@@ -1,6 +1,7 @@
 var _timeout = 500 //ms
 var _id = parseInt(/\d+/g.exec(window.location.href)[0]); 
 console.log('the query id is', _id)
+console.log('after 10s, it will hard reload')
 
 spider_start = function () {
     if (localStorage.spiderResults == null) {
@@ -74,7 +75,12 @@ saveToFile = function () {
 }
 
 
-if (localStorage.spider){
-    window.onload = spider_continue; 
-    document.onload = spider_continue; 
+if (localStorage.spider) {
+    window.onload = spider_continue;
+    document.onload = spider_continue;
+
+    setTimeout(function () {
+        window.location.reload()
+    }, 10000)    //if 10s pass, then make a hard refresh
 }
+
