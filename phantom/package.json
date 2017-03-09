@@ -1,0 +1,12 @@
+{
+  "name": "phantom",
+  "version": "1.0.0",
+  "description": "This is a JS crawler based on PhantomJS",
+  "main": "spider.js",
+  "scripts": {
+    "test": "phantomjs spider.js",
+    "start": "phantomjs spider.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
